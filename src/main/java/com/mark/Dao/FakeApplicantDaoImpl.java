@@ -9,6 +9,14 @@ import org.springframework.stereotype.Repository;
 
 import com.mark.Entity.Applicant;
 
+/**
+ * @author mark
+ * 
+ * NOT BEING USED ANYMORE
+ * 
+ * Refer to ApplicantRepository.java
+ *
+ */
 @Repository
 @Qualifier("fakedata")
 public class FakeApplicantDaoImpl implements ApplicantDao {

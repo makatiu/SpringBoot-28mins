@@ -12,6 +12,14 @@ import org.springframework.stereotype.Repository;
 
 import com.mark.Entity.Applicant;
 
+/**
+ * @author mark
+ * 
+ * NOT BEING USED ANYMORE
+ * 
+ * Refer to ApplicantRepository.java
+ *
+ */
 @Repository("postgres")
 public class PostGresApplicantDaoImpl implements ApplicantDao {
 
