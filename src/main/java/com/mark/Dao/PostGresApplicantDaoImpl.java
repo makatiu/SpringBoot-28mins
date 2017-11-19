@@ -53,20 +53,36 @@ public class PostGresApplicantDaoImpl implements ApplicantDao {
 
 	@Override
 	public void removeApplicantById(int id) {
-		// TODO Auto-generated method stub
-
+		final String sql = "DELETE FROM applicant WHERE id = ?";
+		jdbcTemplate.update(sql, id);
 	}
 
 	@Override
 	public void updateApplicant(Applicant applicant) {
 		// TODO Auto-generated method stub
 
+		final String sql = "UPDATE applicant SET name = ?, destination = ? WHERE id = ?";
+		
+		final int id = applicant.getId();
+		final String name = applicant.getName();
+		final String destination = applicant.getDestination();
+		
+		jdbcTemplate.update(sql, new Object[] {name, destination, id});
+		
 	}
 
 	@Override
 	public void insertApplicant(Applicant applicant) {
 		// TODO Auto-generated method stub
 
+final String sql = "INSERT INTO applicant (name, destination) VALUES (?, ?)";
+		
+		final int id = applicant.getId();
+		final String name = applicant.getName();
+		final String destination = applicant.getDestination();
+		
+		jdbcTemplate.update(sql, new Object[] {name, destination});
+		
 	}
 
 }
