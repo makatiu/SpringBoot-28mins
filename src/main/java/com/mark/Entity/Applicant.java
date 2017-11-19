@@ -1,20 +1,19 @@
 package com.mark.Entity;
 
+import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.validation.constraints.NotNull;
 
+@Entity
 public class Applicant {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
 	
-	@NotNull
 	private String name;
 	
-	@NotNull
 	private String destination;
 	
 	public Applicant(int id, String name, String destination) {

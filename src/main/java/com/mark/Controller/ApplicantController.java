@@ -20,7 +20,7 @@ public class ApplicantController {
 	private ApplicantService service;
 	
 	@RequestMapping(method = RequestMethod.GET)
-	public Collection<Applicant> getAllApplicants(){
+	public Iterable<Applicant> getAllApplicants(){
 		return service.getAllApplicants();
 	}
 	
