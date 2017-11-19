@@ -1,4 +1,4 @@
-package com.mark.service;
+package com.mark.Service;
 
 import org.springframework.stereotype.Component;
 
